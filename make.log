@@ -1,0 +1,210 @@
+[root@localhost tccl]# make
+make -C src build BUILDDIR=/data/yangl/tccl/build
+make[1]: 进入目录“/data/yangl/tccl/src”
+make -C collectives/device
+make[2]: 进入目录“/data/yangl/tccl/src/collectives/device”
+make[2]: 对“build”无需做任何事。
+make[2]: 离开目录“/data/yangl/tccl/src/collectives/device”
+ar -rf /data/yangl/tccl/build/lib/libtccl_static.a /data/yangl/tccl/build/obj/enqueue.o /data/yangl/tccl/build/obj/init.o /data/yangl/tccl/build/obj/proc.o /data/yangl/tccl/build/obj/collectives/all_gather.o /data/yangl/tccl/build/obj/collectives/all_reduce.o /data/yangl/tccl/build/obj/collectives/all_to_all.o /data/yangl/tccl/build/obj/collectives/broadcast.o /data/yangl/tccl/build/obj/collectives/reduce.o /data/yangl/tccl/build/obj/collectives/reduce_scatter.o /data/yangl/tccl/build/obj/collectives/sendrecv.o /data/yangl/tccl/build/obj/transport/shm.o /data/yangl/tccl/build/obj/misc/barrier.o /data/yangl/tccl/build/obj/misc/debug.o /data/yangl/tccl/build/obj/misc/ib.o /data/yangl/tccl/build/obj/misc/ibvsymbols.o /data/yangl/tccl/build/obj/misc/ibwrap.o /data/yangl/tccl/build/obj/misc/nic.o /data/yangl/tccl/build/obj/misc/post.o /data/yangl/tccl/build/obj/misc/sharp.o /data/yangl/tccl/build/obj/misc/sharp_collsymbols.o /data/yangl/tccl/build/obj/misc/sharp_collwrap.o /data/yangl/tccl/build/obj/misc/socket.o /data/yangl/tccl/build/obj/misc/utils.o /data/yangl/tccl/build/obj/misc/yangl.o        
+ar: 正在创建 /data/yangl/tccl/build/lib/libtccl_static.a
+g++ -shared -g -o /data/yangl/tccl/build/lib/libtccl.so... /data/yangl/tccl/build/obj/enqueue.o /data/yangl/tccl/build/obj/init.o /data/yangl/tccl/build/obj/proc.o /data/yangl/tccl/build/obj/collectives/all_gather.o /data/yangl/tccl/build/obj/collectives/all_reduce.o /data/yangl/tccl/build/obj/collectives/all_to_all.o /data/yangl/tccl/build/obj/collectives/broadcast.o /data/yangl/tccl/build/obj/collectives/reduce.o /data/yangl/tccl/build/obj/collectives/reduce_scatter.o /data/yangl/tccl/build/obj/collectives/sendrecv.o /data/yangl/tccl/build/obj/transport/shm.o /data/yangl/tccl/build/obj/misc/barrier.o /data/yangl/tccl/build/obj/misc/debug.o /data/yangl/tccl/build/obj/misc/ib.o /data/yangl/tccl/build/obj/misc/ibvsymbols.o /data/yangl/tccl/build/obj/misc/ibwrap.o /data/yangl/tccl/build/obj/misc/nic.o /data/yangl/tccl/build/obj/misc/post.o /data/yangl/tccl/build/obj/misc/sharp.o /data/yangl/tccl/build/obj/misc/sharp_collsymbols.o /data/yangl/tccl/build/obj/misc/sharp_collwrap.o /data/yangl/tccl/build/obj/misc/socket.o /data/yangl/tccl/build/obj/misc/utils.o /data/yangl/tccl/build/obj/misc/yangl.o         -L/data/sdaaruntime/tmp/gdev/extras -L/data/sdaaruntime/tmp/gdev/lib64     
+rm -rf /data/yangl/tccl/build/lib/libtccl.so.
+ln -sf libtccl.so... /data/yangl/tccl/build/lib/libtccl.so.
+ln -sf libtccl.so. /data/yangl/tccl/build/lib/libtccl.so
+make[1]: 离开目录“/data/yangl/tccl/src”
+[root@localhost tccl]# ls
+BUGS  build  CPPLINT.cfg  depend  example  Makefile  Makefile.bak  my_test  README.md  sdpti_hooklib  src  tags  tcclenv  tccl.spec  test  tools
+[root@localhost tccl]# make clean
+make -C src clean BUILDDIR=/data/yangl/tccl/build
+make[1]: 进入目录“/data/yangl/tccl/src”
+make -C ./collectives/device/ clean
+make[2]: 进入目录“/data/yangl/tccl/src/collectives/device”
+rm -f /data/yangl/tccl/build/obj/collectives/host_calculator.o /data/yangl/tccl/build/obj/collectives/device/all_reduce_func.o
+clean over
+make[2]: 离开目录“/data/yangl/tccl/src/collectives/device”
+rm -rf /data/yangl/tccl/build/include /data/yangl/tccl/build/lib /data/yangl/tccl/build/obj 
+rm -rf /data/yangl/tccl/build
+make[1]: 离开目录“/data/yangl/tccl/src”
+[root@localhost tccl]# make 
+make -C src build BUILDDIR=/data/yangl/tccl/build
+make[1]: 进入目录“/data/yangl/tccl/src”
+Compiling tccl.h
+Compiling enqueue.cc > enqueue.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/enqueue.o /data/yangl/tccl/src/enqueue.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling init.cc > init.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/init.o /data/yangl/tccl/src/init.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling proc.cc > proc.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/proc.o /data/yangl/tccl/src/proc.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling all_gather.cc > all_gather.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/collectives/all_gather.o /data/yangl/tccl/src/collectives/all_gather.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling all_reduce.cc > all_reduce.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/collectives/all_reduce.o /data/yangl/tccl/src/collectives/all_reduce.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling all_to_all.cc > all_to_all.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/collectives/all_to_all.o /data/yangl/tccl/src/collectives/all_to_all.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling broadcast.cc > broadcast.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/collectives/broadcast.o /data/yangl/tccl/src/collectives/broadcast.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling reduce.cc > reduce.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/collectives/reduce.o /data/yangl/tccl/src/collectives/reduce.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling reduce_scatter.cc > reduce_scatter.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/collectives/reduce_scatter.o /data/yangl/tccl/src/collectives/reduce_scatter.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling sendrecv.cc > sendrecv.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/collectives/sendrecv.o /data/yangl/tccl/src/collectives/sendrecv.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling shm.cc > shm.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/transport/shm.o /data/yangl/tccl/src/transport/shm.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling barrier.cc > barrier.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/misc/barrier.o /data/yangl/tccl/src/misc/barrier.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling debug.cc > debug.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/misc/debug.o /data/yangl/tccl/src/misc/debug.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling ib.cc > ib.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/misc/ib.o /data/yangl/tccl/src/misc/ib.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+/data/yangl/tccl/src/misc/ib.cc: In function 'int get_con_data(ibvResources*)':
+/data/yangl/tccl/src/misc/ib.cc:333:86: warning: taking address of packed member of 'ibvResources' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  333 | if (wrap_ibv_query_gid(res->ib_ctx, IB_PORT, SGID, (union ibv_gid *)res->local_props.gid)) {
+      |                                                                     ~~~~~~~~~~~~~~~~~^~~
+Compiling ibvsymbols.cc > ibvsymbols.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/misc/ibvsymbols.o /data/yangl/tccl/src/misc/ibvsymbols.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling ibwrap.cc > ibwrap.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/misc/ibwrap.o /data/yangl/tccl/src/misc/ibwrap.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling nic.cc > nic.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/misc/nic.o /data/yangl/tccl/src/misc/nic.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling post.cc > post.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/misc/post.o /data/yangl/tccl/src/misc/post.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling sharp.cc > sharp.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/misc/sharp.o /data/yangl/tccl/src/misc/sharp.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling sharp_collsymbols.cc > sharp_collsymbols.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/misc/sharp_collsymbols.o /data/yangl/tccl/src/misc/sharp_collsymbols.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling sharp_collwrap.cc > sharp_collwrap.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/misc/sharp_collwrap.o /data/yangl/tccl/src/misc/sharp_collwrap.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling socket.cc > socket.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/misc/socket.o /data/yangl/tccl/src/misc/socket.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling utils.cc > utils.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/misc/utils.o /data/yangl/tccl/src/misc/utils.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+Compiling yangl.cc > yangl.o
+g++  -fopenmp -std=c++11 -O0 -g -o /data/yangl/tccl/build/obj/misc/yangl.o /data/yangl/tccl/src/misc/yangl.cc  -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/sdaaruntime/tmp/gdev/include -I/data/yangl/tccl/depend -I/data/sdaaruntime/tmp/gdev/include  -fPIC  -c 
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaMemDeviceGetHostPointer(void**, void*)':
+/data/yangl/tccl/src/misc/yangl.cc:11:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   11 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaMemDevicePutHostPointer(void*)':
+/data/yangl/tccl/src/misc/yangl.cc:16:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   16 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaMemcpyPeer(void*, int, const void*, int, size_t)':
+/data/yangl/tccl/src/misc/yangl.cc:22:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   22 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaNicRdmaWriteAsync(sdaaStream_t, sdaaNicRdmaQueue_t, uint64_t, uint64_t, uint64_t, size_t)':
+/data/yangl/tccl/src/misc/yangl.cc:29:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   29 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaNicRdmaQueueCreate(SDnicRdmaQueue_st**, uint64_t, uint64_t)':
+/data/yangl/tccl/src/misc/yangl.cc:36:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   36 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaIpcMemcpyPeertoPeerAsync(void*, const void*, size_t, int, sdaaStream_t)':
+/data/yangl/tccl/src/misc/yangl.cc:42:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   42 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaCrossMemToBusMem(void*, uint64_t*)':
+/data/yangl/tccl/src/misc/yangl.cc:47:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   47 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaStreamBatchMemOp(sdaaStream_t, unsigned int, sdaaStreamBatchMemOpParams*, unsigned int)':
+/data/yangl/tccl/src/misc/yangl.cc:53:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   53 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaIpcGetMemHandle(sdaaIpcMemHandle_t*, void*)':
+/data/yangl/tccl/src/misc/yangl.cc:61:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   61 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaIpcOpenMemHandle(void**, sdaaIpcMemHandle_t, unsigned int)':
+/data/yangl/tccl/src/misc/yangl.cc:68:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   68 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaGraphCreate(SDgraph_st**, unsigned int)':
+/data/yangl/tccl/src/misc/yangl.cc:73:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   73 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaGraphDestroy(sdaaGraph_t)':
+/data/yangl/tccl/src/misc/yangl.cc:79:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   79 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaGraphAddKernelNode(SDgraphNode_st**, sdaaGraph_t, SDgraphNode_st* const*, size_t, const sdaaKernelNodeParams*)':
+/data/yangl/tccl/src/misc/yangl.cc:87:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   87 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaGraphAddResideKernelNode(SDgraphNode_st**, sdaaGraph_t, SDgraphNode_st* const*, size_t, const sdaaKernelNodeParams*)':
+/data/yangl/tccl/src/misc/yangl.cc:94:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   94 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaGraphAddP2pcpyNode(SDgraphNode_st**, sdaaGraph_t, SDgraphNode_st* const*, size_t, const sdaaP2pcpyNodeParams*)':
+/data/yangl/tccl/src/misc/yangl.cc:101:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  101 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaGraphAddMemOpNode(SDgraphNode_st**, sdaaGraph_t, SDgraphNode_st* const*, size_t, const sdaaMemOpNodeParams*)':
+/data/yangl/tccl/src/misc/yangl.cc:109:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  109 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaGraphInstantiate(SDgraphExec_st**, sdaaGraph_t, long long unsigned int)':
+/data/yangl/tccl/src/misc/yangl.cc:116:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  116 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaGraphExecDestroy(sdaaGraphExec_t)':
+/data/yangl/tccl/src/misc/yangl.cc:122:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  122 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaGraphExecKernelNodeSetParams(sdaaGraphExec_t, sdaaGraphNode_t, const sdaaKernelNodeParams*)':
+/data/yangl/tccl/src/misc/yangl.cc:129:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  129 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaGraphExecP2pcpyNodeSetParams(sdaaGraphExec_t, sdaaGraphNode_t, const sdaaP2pcpyNodeParams*)':
+/data/yangl/tccl/src/misc/yangl.cc:136:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  136 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaGraphExecMemOpNodeSetParams(sdaaGraphExec_t, sdaaGraphNode_t, const sdaaMemOpNodeParams*)':
+/data/yangl/tccl/src/misc/yangl.cc:143:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  143 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaGraphLaunch(sdaaGraphExec_t, sdaaStream_t)':
+/data/yangl/tccl/src/misc/yangl.cc:149:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  149 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaMallocCross(void**, size_t)':
+/data/yangl/tccl/src/misc/yangl.cc:155:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  155 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaLaunchHostFunc(sdaaStream_t, sdaaHostFn_t, void*)':
+/data/yangl/tccl/src/misc/yangl.cc:162:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  162 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaStreamWriteValue64(sdaaStream_t, void*, uint64_t, unsigned int)':
+/data/yangl/tccl/src/misc/yangl.cc:169:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  169 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaStreamWaitValue64(sdaaStream_t, void*, uint64_t, unsigned int)':
+/data/yangl/tccl/src/misc/yangl.cc:176:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  176 | }
+      | ^
+/data/yangl/tccl/src/misc/yangl.cc: In function 'sdaaError_t sdaaDeviceGetAttribute(int*, sdaaDeviceAttr, int)':
+/data/yangl/tccl/src/misc/yangl.cc:181:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  181 | }
+      | ^
+make -C collectives/device
+make[2]: 进入目录“/data/yangl/tccl/src/collectives/device”
+compling all_reduce_func.cpp > all_reduce_func.o
+#tecocc -Wno-empty-body -c -O2 all_reduce_func.cpp -o /data/yangl/tccl/build/obj/collectives/device/all_reduce_func.o -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/yangl/tccl/src/collectives/device -I/data/sdaaruntime/tmp/gdev/include -L/data/sdaaruntime/tmp/gdev/lib64 -fPIC
+clang -Wno-empty-body -c -O0 all_reduce_func.cpp -o /data/yangl/tccl/build/obj/collectives/device/all_reduce_func.o -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/yangl/tccl/src/collectives/device -I/data/sdaaruntime/tmp/gdev/include -L/data/sdaaruntime/tmp/gdev/lib64 -fPIC
+clang-13: warning: argument unused during compilation: '-L/data/sdaaruntime/tmp/gdev/lib64' [-Wunused-command-line-argument]
+compling host_calculator.cpp > host_calculator.o
+#tecocc -Wno-empty-body -c -O2 ../host_calculator.cpp -o /data/yangl/tccl/build/obj/collectives/host_calculator.o -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/yangl/tccl/src/collectives/device -I/data/sdaaruntime/tmp/gdev/include -L/data/sdaaruntime/tmp/gdev/lib64 -fPIC
+clang -Wno-empty-body -c -O0 ../host_calculator.cpp -o /data/yangl/tccl/build/obj/collectives/host_calculator.o -DUSE_EXPERIMENTAL_SDAA_API -I/data/yangl/tccl/src -I/data/yangl/tccl/src/include -I/data/yangl/tccl/src/collectives -I/data/yangl/tccl/src/collectives/device -I/data/sdaaruntime/tmp/gdev/include -L/data/sdaaruntime/tmp/gdev/lib64 -fPIC
+clang-13: warning: argument unused during compilation: '-L/data/sdaaruntime/tmp/gdev/lib64' [-Wunused-command-line-argument]
+make[2]: 离开目录“/data/yangl/tccl/src/collectives/device”
+ar -rf /data/yangl/tccl/build/lib/libtccl_static.a /data/yangl/tccl/build/obj/enqueue.o /data/yangl/tccl/build/obj/init.o /data/yangl/tccl/build/obj/proc.o /data/yangl/tccl/build/obj/collectives/all_gather.o /data/yangl/tccl/build/obj/collectives/all_reduce.o /data/yangl/tccl/build/obj/collectives/all_to_all.o /data/yangl/tccl/build/obj/collectives/broadcast.o /data/yangl/tccl/build/obj/collectives/reduce.o /data/yangl/tccl/build/obj/collectives/reduce_scatter.o /data/yangl/tccl/build/obj/collectives/sendrecv.o /data/yangl/tccl/build/obj/transport/shm.o /data/yangl/tccl/build/obj/misc/barrier.o /data/yangl/tccl/build/obj/misc/debug.o /data/yangl/tccl/build/obj/misc/ib.o /data/yangl/tccl/build/obj/misc/ibvsymbols.o /data/yangl/tccl/build/obj/misc/ibwrap.o /data/yangl/tccl/build/obj/misc/nic.o /data/yangl/tccl/build/obj/misc/post.o /data/yangl/tccl/build/obj/misc/sharp.o /data/yangl/tccl/build/obj/misc/sharp_collsymbols.o /data/yangl/tccl/build/obj/misc/sharp_collwrap.o /data/yangl/tccl/build/obj/misc/socket.o /data/yangl/tccl/build/obj/misc/utils.o /data/yangl/tccl/build/obj/misc/yangl.o        
+ar: 正在创建 /data/yangl/tccl/build/lib/libtccl_static.a
+g++ -shared -g -o /data/yangl/tccl/build/lib/libtccl.so... /data/yangl/tccl/build/obj/enqueue.o /data/yangl/tccl/build/obj/init.o /data/yangl/tccl/build/obj/proc.o /data/yangl/tccl/build/obj/collectives/all_gather.o /data/yangl/tccl/build/obj/collectives/all_reduce.o /data/yangl/tccl/build/obj/collectives/all_to_all.o /data/yangl/tccl/build/obj/collectives/broadcast.o /data/yangl/tccl/build/obj/collectives/reduce.o /data/yangl/tccl/build/obj/collectives/reduce_scatter.o /data/yangl/tccl/build/obj/collectives/sendrecv.o /data/yangl/tccl/build/obj/transport/shm.o /data/yangl/tccl/build/obj/misc/barrier.o /data/yangl/tccl/build/obj/misc/debug.o /data/yangl/tccl/build/obj/misc/ib.o /data/yangl/tccl/build/obj/misc/ibvsymbols.o /data/yangl/tccl/build/obj/misc/ibwrap.o /data/yangl/tccl/build/obj/misc/nic.o /data/yangl/tccl/build/obj/misc/post.o /data/yangl/tccl/build/obj/misc/sharp.o /data/yangl/tccl/build/obj/misc/sharp_collsymbols.o /data/yangl/tccl/build/obj/misc/sharp_collwrap.o /data/yangl/tccl/build/obj/misc/socket.o /data/yangl/tccl/build/obj/misc/utils.o /data/yangl/tccl/build/obj/misc/yangl.o         -L/data/sdaaruntime/tmp/gdev/extras -L/data/sdaaruntime/tmp/gdev/lib64     
+rm -rf /data/yangl/tccl/build/lib/libtccl.so.
+ln -sf libtccl.so... /data/yangl/tccl/build/lib/libtccl.so.
+ln -sf libtccl.so. /data/yangl/tccl/build/lib/libtccl.so
+make[1]: 离开目录“/data/yangl/tccl/src”
+
