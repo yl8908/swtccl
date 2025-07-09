@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsdpti-hook-tccl.a CMakeFiles/sdpti-hook-tccl.dir/generated/sdpti_hook_tccl_internal.c.o
+/usr/bin/ranlib libsdpti-hook-tccl.a

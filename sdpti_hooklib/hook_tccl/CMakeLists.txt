@@ -1,0 +1,7 @@
+SET(SDPTI_HOOK_LIB "sdpti-hook-tccl")
+list(APPEND SDPTI_HOOK_FILES "generated/sdpti_hook_tccl_internal.c")
+add_library(${SDPTI_HOOK_LIB} STATIC ${SDPTI_HOOK_FILES})
+target_include_directories(${SDPTI_HOOK_LIB} PUBLIC .)
+target_include_directories(${SDPTI_HOOK_LIB} PUBLIC ../../src)
+target_include_directories(${SDPTI_HOOK_LIB} PRIVATE $ENV{SDAA_HOME}/include)
+target_compile_options(${SDPTI_HOOK_LIB} PRIVATE -fPIC)

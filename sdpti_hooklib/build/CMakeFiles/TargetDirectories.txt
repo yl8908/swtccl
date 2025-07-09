@@ -1,0 +1,5 @@
+/data/yandw/tccl/sdpti_hooklib/build/CMakeFiles/edit_cache.dir
+/data/yandw/tccl/sdpti_hooklib/build/CMakeFiles/rebuild_cache.dir
+/data/yandw/tccl/sdpti_hooklib/build/hook_tccl/CMakeFiles/sdpti-hook-tccl.dir
+/data/yandw/tccl/sdpti_hooklib/build/hook_tccl/CMakeFiles/edit_cache.dir
+/data/yandw/tccl/sdpti_hooklib/build/hook_tccl/CMakeFiles/rebuild_cache.dir
